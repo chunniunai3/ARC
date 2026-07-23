@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from src.varc import (VARCConfig, VARCModel, ARCDataset, save_checkpoint,
-                      load_checkpoint, train_epoch, BG_CLASS)
+                      load_checkpoint, BG_CLASS)
 from pathlib import Path
 import math
 
@@ -17,8 +17,15 @@ resume = Path(ckpt_path).exists()
 
 if resume:
     print("Resuming from checkpoint...")
-    load_checkpoint(model, ckpt_path, device)
-    start_epoch = 11  # was at epoch 10, resume from 11
+    ckpt = torch.load(ckpt_path, map_location=device)
+    if isinstance(ckpt, dict) and 'epoch' in ckpt:
+        model.load_state_dict(ckpt['model'])
+        start_epoch = ckpt['epoch'] + 1
+        print(f"  Resumed from epoch {ckpt['epoch']}")
+    else:
+        model.load_state_dict(ckpt)
+        start_epoch = 14
+        print("  Loaded state_dict (epoch unknown, starting from 14)")
 else:
     print("Training from scratch...")
     start_epoch = 1
@@ -26,23 +33,25 @@ else:
 train_dataset = ARCDataset(split='training', max_tasks=400, rearc_prob=1.0)
 val_dataset = ARCDataset(split='training', max_tasks=40, rearc_prob=0.0)
 
-optimizer = torch.optim.Adam(model.parameters(), lr=3e-4, betas=(0.9, 0.999))
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, betas=(0.9, 0.999))
 criterion = nn.CrossEntropyLoss(ignore_index=BG_CLASS)
-T_max = 50
-num_epochs = 50
+T_max = 100
+num_epochs = 100
+
+batch_size = 32
 
 for epoch in range(start_epoch, num_epochs + 1):
     if epoch <= 5:
-        lr = 3e-4 * epoch / 5
+        lr = 1e-3 * epoch / 5
     else:
         progress = (epoch - 5) / T_max
-        lr = 3e-4 * 0.5 * (1.0 + math.cos(math.pi * progress))
+        lr = 1e-3 * 0.5 * (1.0 + math.cos(math.pi * progress))
     for g in optimizer.param_groups:
         g["lr"] = lr
 
     model.train()
     total_loss = 0.0
-    loader = DataLoader(train_dataset, batch_size=1, shuffle=True)
+    loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     for batch in loader:
         train_in = batch["train_input"].to(device)
         train_target = batch["train_target"].to(device)
@@ -62,7 +71,7 @@ for epoch in range(start_epoch, num_epochs + 1):
 
     model.eval()
     val_loss = 0.0
-    val_loader = DataLoader(val_dataset, batch_size=1)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
     with torch.no_grad():
         for batch in val_loader:
             ti = batch["train_input"].to(device)
@@ -77,6 +86,6 @@ for epoch in range(start_epoch, num_epochs + 1):
     val_loss /= len(val_loader)
 
     print(f"  Epoch {epoch:3d}/{num_epochs}  lr={lr:.2e}  train_loss={train_loss:.4f}  val_loss={val_loss:.4f}")
-    torch.save(model.state_dict(), ckpt_path)
+    torch.save({'epoch': epoch, 'model': model.state_dict()}, ckpt_path)
 
 print("Done!")
