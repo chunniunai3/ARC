@@ -1,0 +1,602 @@
+[
+  {
+    "task_id": "007bbfb7",
+    "correct": true,
+    "time_s": 10.55,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach example takes a 3\u00d73 input and produces a 9\u00d79 output.  \nThe 9\u00d79 output appears to be a 3\u00d73 tiling of the input pattern, but with some modifications:  \n- The input patte"
+  },
+  {
+    "task_id": "00d62c1b",
+    "correct": false,
+    "time_s": 7.46,
+    "response_preview": "Looking at the examples, the transformation fills certain enclosed areas of green (3) with yellow (4). The pattern is: wherever there is a region completely bounded by green (3) cells (like a closed l"
+  },
+  {
+    "task_id": "017c7c7b",
+    "correct": true,
+    "time_s": 5.78,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach example has an input grid of size 6\u00d73 and an output grid of size 9\u00d73.  \nThe transformation seems to repeat the pattern of the input rows, but with an extra copy of som"
+  },
+  {
+    "task_id": "025d127b",
+    "correct": false,
+    "time_s": 7.68,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples, the shape is a thick \"arrow\" or \"V\" made of a single color, pointing to the bottom-right.  \nThe transformation shifts the entire shape one column to the r"
+  },
+  {
+    "task_id": "045e512c",
+    "correct": false,
+    "time_s": 10.52,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Example 1**  \n- Input has a 3\u00d73 \u201cO\u201d shape (azure 8) and a single green (3) pixel to its right, plus a red (2) 3\u00d73 \u201cO\u201d shape below.  \n- Output repeats"
+  },
+  {
+    "task_id": "0520fde7",
+    "correct": true,
+    "time_s": 6.09,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach input is 3 rows \u00d7 7 columns.  \nColumn 4 (index 3) is always 5 (gray), acting as a separator.  \nThe left side (columns 0\u20132) and right side (columns 4\u20136) are 3\u00d73 blocks."
+  },
+  {
+    "task_id": "05269061",
+    "correct": false,
+    "time_s": 9.39,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid contains a diagonal or anti-diagonal sequence of non-zero numbers that form a repeating pattern. The output grid is a full 7\u00d77 tiling of tha"
+  },
+  {
+    "task_id": "05f2a901",
+    "correct": true,
+    "time_s": 33.51,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, there are two distinct colored objects: red (2) and azure (8).  \nThe transformation moves the red object downward so that it is directly below the azure ob"
+  },
+  {
+    "task_id": "06df4c85",
+    "correct": true,
+    "time_s": 20.82,
+    "response_preview": "Let\u2019s break this down.\n\n**Pattern observed from examples:**\n\n- The grid is divided into cells by a \u201cborder\u201d color (8 in example 1, 1 in example 2, 4 in example 3) that forms a repeating pattern of 3\u00d73"
+  },
+  {
+    "task_id": "08ed6ac7",
+    "correct": false,
+    "time_s": 5.02,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples, the input grid contains gray (5) cells that form vertical segments. In the output, each vertical segment of gray is replaced by a single color, and the co"
+  },
+  {
+    "task_id": "09629e4f",
+    "correct": false,
+    "time_s": 32.46,
+    "response_preview": "Looking at the examples, I notice a pattern:\n\n1. The grid is 11x11 with horizontal and vertical lines of 5s (gray) at rows 3 and 7 (0-indexed) and columns 3 and 7.\n2. This divides the grid into 9 regi"
+  },
+  {
+    "task_id": "0962bcdd",
+    "correct": false,
+    "time_s": 14.99,
+    "response_preview": "Let\u2019s break this down.\n\n**Step 1 \u2013 Identify the pattern**  \nIn both examples, the input contains two small \u201cplus-shaped\u201d patterns (a center cell with a different color, surrounded by four orthogonal n"
+  },
+  {
+    "task_id": "0a938d79",
+    "correct": false,
+    "time_s": 11.85,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The input grid has exactly two non-zero cells: one in the top row (or near the top) and one somewhere else (often near the bottom).\n- The output fills th"
+  },
+  {
+    "task_id": "0b148d64",
+    "correct": false,
+    "time_s": 7.52,
+    "response_preview": "Looking at the examples, the transformation extracts a subgrid from the input.  \n\nIn each case:  \n- The input has a large grid with two distinct colored regions separated by rows/columns of zeros.  \n-"
+  },
+  {
+    "task_id": "0ca9ddb6",
+    "correct": false,
+    "time_s": 9.91,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example, the input contains isolated colored cells (non-zero).  \nThe output adds a **cross-shaped pattern** around each of those cells, using a specific color fo"
+  },
+  {
+    "task_id": "0d3d703e",
+    "correct": true,
+    "time_s": 3.69,
+    "response_preview": "The pattern in the examples shows that each column of the input grid is transformed to a new column in the output grid. The mapping appears to be consistent across all rows, meaning the transformation"
+  },
+  {
+    "task_id": "0dfd9992",
+    "correct": true,
+    "time_s": 11.78,
+    "response_preview": "Looking at the examples, the transformation rule is: **replace all zeros (0) in the input grid with the correct pattern values that would complete the repeating tile pattern.**\n\nEach grid is composed "
+  },
+  {
+    "task_id": "0e206a2e",
+    "correct": false,
+    "time_s": 20.85,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains several small clusters of colored cells. The output takes one of those clusters (the one that appears to be a \u201ctemplate\u201d shape) and move"
+  },
+  {
+    "task_id": "10fcaaa3",
+    "correct": false,
+    "time_s": 34.85,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The output grid\u2019s height is **double** the input height.\n- The output grid\u2019s width is **double** the input width.\n- The transformation seems to tile the "
+  },
+  {
+    "task_id": "11852cab",
+    "correct": false,
+    "time_s": 10.93,
+    "response_preview": "Looking at the examples, I notice a pattern: the transformation seems to \"complete\" a pattern by adding missing symmetric elements. \n\nIn each example, there is a central shape or pattern that appears "
+  },
+  {
+    "task_id": "1190e5a7",
+    "correct": false,
+    "time_s": 33.99,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid contains a \u201cbackground\u201d color (e.g., 3, 1) and a \u201cseparator\u201d color (e.g., 7, 8, 1 in example 3) that forms full rows and columns, dividing t"
+  },
+  {
+    "task_id": "137eaa0f",
+    "correct": false,
+    "time_s": 32.0,
+    "response_preview": "Let\u2019s analyze the pattern.\n\nIn each example, the input is an 11\u00d711 grid with scattered colored cells. The output is a 3\u00d73 grid that seems to capture the **bounding box** of the non-zero cells, but not"
+  },
+  {
+    "task_id": "150deff5",
+    "correct": false,
+    "time_s": 9.88,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains gray (5) shapes. The output replaces them with two colors: red (2) and light blue (8).  \n\nThe transformation seems to split the shape in"
+  },
+  {
+    "task_id": "178fcbfb",
+    "correct": false,
+    "time_s": 13.01,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Observations:**\n\n1. In each example, the input contains several isolated colored cells (non-zero) on a black (0) background.\n2. The output creates fu"
+  },
+  {
+    "task_id": "1a07d186",
+    "correct": false,
+    "time_s": 14.54,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Observations from examples:**\n\n1. In each example, there are two vertical lines (or horizontal lines) of a certain color that act as boundaries.\n2. T"
+  },
+  {
+    "task_id": "1b2d62fb",
+    "correct": false,
+    "time_s": 21.99,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach input is 5\u00d77, with a vertical line of 1\u2019s in column 3 (0-indexed).  \nThe left side (columns 0\u20132) and right side (columns 4\u20136) contain 0\u2019s and 9\u2019s.  \n\nThe output is alw"
+  },
+  {
+    "task_id": "1b60fb0c",
+    "correct": false,
+    "time_s": 8.74,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains a blue (1) shape. The output adds a red (2) region that fills certain \"holes\" or \"concave indentations\" inside the blue shape, but only "
+  },
+  {
+    "task_id": "1bfc4729",
+    "correct": true,
+    "time_s": 5.31,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn both examples:\n- The input has two colored cells (non-zero) at different positions.\n- The output is a 10\u00d710 grid with two rectangular \u201cframes\u201d stacked vertically, eac"
+  },
+  {
+    "task_id": "1c786137",
+    "correct": false,
+    "time_s": 6.06,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid contains a rectangular \u201cframe\u201d or \u201cborder\u201d made of a single repeated digit (like 2, 4, or 8) that encloses an interior region.  \nThe output "
+  },
+  {
+    "task_id": "1caeab9d",
+    "correct": false,
+    "time_s": 15.06,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the transformation takes scattered colored blocks and moves them so they are aligned into a single contiguous horizontal band, with all blocks placed in th"
+  },
+  {
+    "task_id": "1cf80156",
+    "correct": false,
+    "time_s": 5.04,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid contains a scattered shape made of a single color (red=2, blue=1, azure=8).  \nThe output grid is a **tight bounding box** of that shape, but"
+  },
+  {
+    "task_id": "1e0a9b12",
+    "correct": false,
+    "time_s": 9.93,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the transformation moves all non-zero numbers downward as far as possible, stacking them at the bottom of their columns, while preserving their original le"
+  },
+  {
+    "task_id": "1e32b0e9",
+    "correct": false,
+    "time_s": 25.11,
+    "response_preview": "Let\u2019s break down the pattern.\n\n**Observations from examples:**\n\n1. The grid is divided into 4 quadrants by a cross of a single color (the \"separator\" color: 8 in ex1, 2 in ex2, 1 in ex3, 9 in test).\n2"
+  },
+  {
+    "task_id": "1f0c79e5",
+    "correct": false,
+    "time_s": 23.32,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains a small cluster of colored cells (often a 2\u00d72 or 2\u00d73 shape). The output expands that shape into a diagonal \u201cstaircase\u201d pattern that exte"
+  },
+  {
+    "task_id": "1f642eb9",
+    "correct": false,
+    "time_s": 150.5,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Observations:**\n\n1. In each example, there is a large rectangular block of color 8 (light blue) in the middle.\n2. There are isolated single colored c"
+  },
+  {
+    "task_id": "1f85a75f",
+    "correct": false,
+    "time_s": 4.91,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples, the input is a large 30\u00d730 grid with scattered colored pixels.  \nThe output is a small grid that appears to be a \u201czoomed-in\u201d view of a specific region whe"
+  },
+  {
+    "task_id": "1f876c06",
+    "correct": false,
+    "time_s": 8.45,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example, the input has several colored cells. The output keeps those original cells and adds a diagonal line of the same color extending from each one in a speci"
+  },
+  {
+    "task_id": "1fad071e",
+    "correct": true,
+    "time_s": 5.05,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input is a 9\u00d79 grid containing pairs of adjacent same-colored cells (2\u00d72 blocks of color 1 or 2, and sometimes isolated cells).  \nThe output is always "
+  },
+  {
+    "task_id": "2013d3e2",
+    "correct": false,
+    "time_s": 3.63,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples, the input is a 10\u00d710 grid with a symmetrical shape in the center. The output is a 3\u00d73 grid that appears to be the **top-left quadrant** of the central pat"
+  },
+  {
+    "task_id": "2204b7a8",
+    "correct": true,
+    "time_s": 17.74,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example:\n- The grid has a left border and a right border of a certain color (e.g., 1 and 2 in example 1, 4 and 7 in example 2, 8 and 9 in example 3).\n- There are"
+  },
+  {
+    "task_id": "22168020",
+    "correct": false,
+    "time_s": 11.5,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\nIn each example, the input contains two separate \"X\" shapes made of the same color (like two diagonal lines crossing to form a diamond-like pattern).  "
+  },
+  {
+    "task_id": "22233c11",
+    "correct": false,
+    "time_s": 5.61,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains green (3) shapes. The output keeps those green shapes exactly as they are, and adds azure (8) shapes that appear to be **mirror images**"
+  },
+  {
+    "task_id": "2281f1f4",
+    "correct": false,
+    "time_s": 8.44,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The first row contains some gray (5) cells.\n- Below each gray cell in the first row, there are other gray cells in the same column at various rows.\n- The"
+  },
+  {
+    "task_id": "228f6490",
+    "correct": false,
+    "time_s": 12.75,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, there are two distinct \u201cblobs\u201d of the same shape or color pattern that are swapped or replaced.  \nSpecifically:\n\n- **Example 1**: A gray (5) shape contains"
+  },
+  {
+    "task_id": "22eb0ac0",
+    "correct": true,
+    "time_s": 5.45,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid has pairs of colored cells on the left and right edges, in rows that are not the top or bottom.  \nThe transformation fills an entire row bet"
+  },
+  {
+    "task_id": "234bbc79",
+    "correct": false,
+    "time_s": 11.29,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid is 3 rows tall but varies in width. The output grid is also 3 rows tall but narrower.  \nThe transformation seems to:\n\n1. Remove columns that"
+  },
+  {
+    "task_id": "23581191",
+    "correct": true,
+    "time_s": 7.26,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples:\n- There are two colored cells in the input: one azure (8) and one orange (7).\n- In the output, a cross or plus-shaped structure is drawn centered on each "
+  },
+  {
+    "task_id": "239be575",
+    "correct": false,
+    "time_s": 5.87,
+    "response_preview": "Let\u2019s examine the pattern.\n\nAll examples output a **1\u00d71 grid** containing either `0` or `8`.  \nThat means the transformation reduces the entire input to a single number.\n\nLooking at the examples:\n\n- E"
+  },
+  {
+    "task_id": "23b5c85d",
+    "correct": true,
+    "time_s": 5.29,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains several distinct colored rectangular regions. One of those regions is \u201ccut out\u201d or \u201cisolated\u201d by another region that surrounds it on at "
+  },
+  {
+    "task_id": "253bf280",
+    "correct": true,
+    "time_s": 5.56,
+    "response_preview": "Let\u2019s analyze the pattern.\n\nIn all examples, the transformation connects pairs of azure (8) cells with a straight line of green (3) cells.  \n- If two azure cells are in the same row, the line is horiz"
+  },
+  {
+    "task_id": "25d487eb",
+    "correct": false,
+    "time_s": 5.83,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, there is a **symmetrical shape** (like a diamond or triangle) made of one color, with a **single different-colored cell** at its center or bottom.  \nThe tr"
+  },
+  {
+    "task_id": "25d8a9c8",
+    "correct": true,
+    "time_s": 3.36,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the output is a 3x3 grid where:\n- One entire row is replaced with 5s.\n- All other cells are 0s.\n\nWhich row becomes all 5s?  \nLooking at the examples:\n\n1. I"
+  },
+  {
+    "task_id": "25ff71a9",
+    "correct": true,
+    "time_s": 3.16,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the shape formed by the non-zero cells moves **down by one row** while keeping the same column positions.  \n\n- Example 1:  \n  Row 0: `1 1 1` \u2192 Row 1: `1 1 "
+  },
+  {
+    "task_id": "264363fd",
+    "correct": false,
+    "time_s": 14.24,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Observations:**\n\n1. In each example, there are two separate rectangular regions of a uniform color (background color) that contain a single \"defect\" "
+  },
+  {
+    "task_id": "272f95fa",
+    "correct": true,
+    "time_s": 7.69,
+    "response_preview": "Let\u2019s break down the pattern.\n\n**Observations from examples:**\n\n1. The input grid has a structure of vertical and horizontal lines of color 8 (light blue), forming rectangular \"cells\" or \"rooms\" separ"
+  },
+  {
+    "task_id": "27a28665",
+    "correct": true,
+    "time_s": 18.35,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach input is a 3\u00d73 grid.  \nEach output is a 1\u00d71 grid with a single number.  \n\nThe output number seems to correspond to the **number of distinct colors** (excluding black/0"
+  },
+  {
+    "task_id": "28bf18c6",
+    "correct": false,
+    "time_s": 5.29,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input is an 8\u00d78 grid with a small cluster of non-zero cells. The output is always a 3\u00d76 grid.  \n\nLooking at the transformation:\n\n- The input shape is e"
+  },
+  {
+    "task_id": "28e73c20",
+    "correct": false,
+    "time_s": 32.24,
+    "response_preview": "The pattern in the examples is a \"spiral\" or \"concentric square\" border made of green (3) with a single-cell-wide path of zeros (0) that snakes inward from the top-left area, forming a thick border an"
+  },
+  {
+    "task_id": "29623171",
+    "correct": false,
+    "time_s": 14.61,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn all examples:\n- The grid is 11\u00d711.\n- There are horizontal lines of gray (5) at rows 3 and 7 (0-indexed).\n- There are vertical lines of gray (5) at columns 3 and 7.\n- "
+  },
+  {
+    "task_id": "29c11459",
+    "correct": true,
+    "time_s": 3.64,
+    "response_preview": "In the examples, the transformation takes a grid that has two colored cells on the same row (one on the left edge, one on the right edge) and fills the entire row between them with those colors, meeti"
+  },
+  {
+    "task_id": "29ec7d0e",
+    "correct": true,
+    "time_s": 6.96,
+    "response_preview": "Looking at the examples, the transformation replaces all zeros (0) with the correct pattern values that would complete the repeating sequences. The grids appear to be composed of repeating patterns of"
+  },
+  {
+    "task_id": "2bcee788",
+    "correct": false,
+    "time_s": 11.34,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The input contains a small shape made of two colors (e.g., yellow and red, magenta and red, etc.).\n- The output replaces the background (0) with green (3"
+  },
+  {
+    "task_id": "2bee17df",
+    "correct": false,
+    "time_s": 9.25,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the transformation fills certain connected regions of zeros (0) with green (3).  \nThe green fill appears to be applied to the largest contiguous area of ze"
+  },
+  {
+    "task_id": "2c608aff",
+    "correct": false,
+    "time_s": 11.34,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Observations:**\n\n1. In each example, there is a **rectangular block** of a certain color (e.g., green (3), blue (1), yellow (4), gray (5)) that remai"
+  },
+  {
+    "task_id": "2dc579da",
+    "correct": false,
+    "time_s": 5.8,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The input grid has a cross shape (a full row and a full column of a certain color) dividing the grid into four quadrants.\n- The output grid is a smaller "
+  },
+  {
+    "task_id": "2dd70a9a",
+    "correct": false,
+    "time_s": 7.8,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, there are two colored \u201cmarkers\u201d (red=2 and green=3) somewhere in the grid.  \nThe transformation draws a green (3) path connecting the green marker to the r"
+  },
+  {
+    "task_id": "2dee498d",
+    "correct": true,
+    "time_s": 2.35,
+    "response_preview": "The pattern in the examples is that the output grid is the first block of columns that repeats horizontally in the input.  \nEach input has a width that is a multiple of the output width, and the outpu"
+  },
+  {
+    "task_id": "31aa019c",
+    "correct": true,
+    "time_s": 13.91,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The input is a 10\u00d710 grid with many scattered colored cells.\n- The output is a 10\u00d710 grid that is mostly zeros, except for a single 3\u00d73 block (a square w"
+  },
+  {
+    "task_id": "321b1fc6",
+    "correct": true,
+    "time_s": 10.36,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn both examples, there are two distinct colored shapes (or groups of shapes) in the input.  \nOne shape is made of color 8 (light blue), and the other shape is made of t"
+  },
+  {
+    "task_id": "32597951",
+    "correct": false,
+    "time_s": 13.06,
+    "response_preview": "Looking at the examples, the transformation involves changing some of the azure (8) cells to green (3) in a specific pattern. \n\nLet me analyze the pattern:\n\nIn Example 1, there's a 3x3 block of azure "
+  },
+  {
+    "task_id": "3345333e",
+    "correct": false,
+    "time_s": 7.47,
+    "response_preview": "Looking at the examples, I notice that the transformation removes certain \"noise\" or \"extra\" colored cells that are not part of the main shape, leaving only the clean outline or core structure.\n\nIn Ex"
+  },
+  {
+    "task_id": "3428a4f5",
+    "correct": false,
+    "time_s": 7.9,
+    "response_preview": "Let\u2019s break this down.\n\nEach example has a **13\u00d75** input grid and a **6\u00d75** output grid.  \nThe input is split by a horizontal line of 4s (row 7, 0-indexed row 6).  \nThe top 6 rows and bottom 6 rows a"
+  },
+  {
+    "task_id": "3618c87e",
+    "correct": true,
+    "time_s": 12.65,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The bottom row is all gray (5).\n- Above the bottom row, there are some blue (1) cells in row 3 (0-indexed row 2) and gray (5) cells directly below them i"
+  },
+  {
+    "task_id": "3631a71a",
+    "correct": false,
+    "time_s": 13.73,
+    "response_preview": "Looking at the examples, the transformation appears to be about removing certain \"blobs\" or \"patches\" of color that are surrounded by a specific pattern, while preserving the rest of the grid. \n\nIn ea"
+  },
+  {
+    "task_id": "363442ee",
+    "correct": false,
+    "time_s": 17.16,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example:\n- The leftmost 4 columns contain a 3\u00d73 pattern (rows 0\u20132) and a vertical separator column of 5s at column 3.\n- The rest of the grid (columns 4\u201312) is in"
+  },
+  {
+    "task_id": "36d67576",
+    "correct": false,
+    "time_s": 21.01,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example, the input contains several **plus-shaped** or **cross-shaped** clusters of color 4 (yellow), with a single non-4 color at one of the arms (like 1, 2, 3)"
+  },
+  {
+    "task_id": "36fdfd69",
+    "correct": false,
+    "time_s": 7.16,
+    "response_preview": "Looking at the examples, the transformation involves changing some cells to color 4 (yellow) in specific patterns. \n\nLet me analyze the pattern:\n\n1. In each example, there are clusters of color 2 (red"
+  },
+  {
+    "task_id": "3906de3d",
+    "correct": false,
+    "time_s": 12.42,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example:\n- There is a blue (1) shape that has some holes (0s) inside it.\n- There are red (2) pixels below the blue shape, often forming vertical lines or cluster"
+  },
+  {
+    "task_id": "39a8645d",
+    "correct": false,
+    "time_s": 5.03,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid contains multiple small patterns (like plus signs, crosses, or other shapes) made of the same color.  \nThe output is a 3\u00d73 grid that represe"
+  },
+  {
+    "task_id": "39e1d7f9",
+    "correct": false,
+    "time_s": 13.36,
+    "response_preview": "Looking at the examples, I notice a pattern: the grids are composed of repeating blocks separated by lines of a border color (8 in example 1, 3 in example 2, 8 in example 3). The transformation appear"
+  },
+  {
+    "task_id": "3aa6fb7a",
+    "correct": true,
+    "time_s": 10.16,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the transformation adds a blue (1) cell adjacent to some of the azure (8) shapes.  \nSpecifically, it looks for **isolated single azure cells** that are par"
+  },
+  {
+    "task_id": "3ac3eb23",
+    "correct": true,
+    "time_s": 7.54,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples:\n- The input grid has a single row with some colored cells, and the rest are zeros.\n- The output grid repeats a pattern downward:  \n  For each column that "
+  },
+  {
+    "task_id": "3af2c5a8",
+    "correct": true,
+    "time_s": 6.01,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach example input is 3\u00d74, and the output is 6\u00d78 \u2014 exactly double the height and double the width.  \n\nThe transformation appears to be:  \n1. Take the input grid.  \n2. Creat"
+  },
+  {
+    "task_id": "3bd67248",
+    "correct": true,
+    "time_s": 4.13,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example:\n- The input grid has a vertical line of a certain color (e.g., 6, 5, 8) in the first column, and the rest are zeros.\n- The output keeps that first colum"
+  },
+  {
+    "task_id": "3bdb4ada",
+    "correct": true,
+    "time_s": 6.92,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn both examples:\n- The input has two separate rectangular blocks of the same color, each 3 rows tall.\n- In the output, the middle row of each block is turned into a che"
+  },
+  {
+    "task_id": "3befdf3e",
+    "correct": false,
+    "time_s": 7.49,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example, the input contains a single \u201cring\u201d shape (a border of one color around an inner area of another color).  \nThe output expands that shape outward by one l"
+  },
+  {
+    "task_id": "3c9b0459",
+    "correct": true,
+    "time_s": 2.48,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the output is a 180-degree rotation of the input grid.  \n\nCheck Example 1:  \nInput:  \n```\n2 2 1\n2 1 2\n2 8 1\n```\nRotated 180\u00b0:  \n```\n1 8 2\n2 1 2\n1 2 2\n```\nM"
+  },
+  {
+    "task_id": "3de23699",
+    "correct": false,
+    "time_s": 16.17,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example:\n- The input grid contains two distinct colors: one for \u201cmarker\u201d points (like 4, 3, 6, 8) and one for a \u201cshape\u201d (like 2, 8, 4, 3).\n- The markers appear i"
+  },
+  {
+    "task_id": "3e980e27",
+    "correct": false,
+    "time_s": 12.39,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the transformation takes **each distinct cluster of non-zero colored cells** and **replicates** it at the location of every other isolated non-zero cell of"
+  },
+  {
+    "task_id": "3eda0437",
+    "correct": false,
+    "time_s": 24.63,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, a contiguous block of 0s (white) that is surrounded by 1s (blue) or touches a 1 on at least two sides gets replaced by 6s (magenta).  \nThe block must be fu"
+  },
+  {
+    "task_id": "3f7978a0",
+    "correct": true,
+    "time_s": 17.15,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid contains scattered **8** (light blue) and **5** (gray) cells.  \nThe output grid is a **cropped and rearranged** version that extracts a rect"
+  },
+  {
+    "task_id": "40853293",
+    "correct": false,
+    "time_s": 24.24,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Observations from Example 1:**\n- There are isolated colored cells (red=2, green=3, blue=6, gray=5, azure=8).\n- In the output, each isolated cell beco"
+  },
+  {
+    "task_id": "4093f84a",
+    "correct": false,
+    "time_s": 12.55,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Observations:**\n\n1. In each example, there is a large contiguous block of gray (5) in the input.  \n2. Scattered around the grid are single colored pi"
+  },
+  {
+    "task_id": "41e4d17e",
+    "correct": false,
+    "time_s": 6.73,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn both examples:\n- The input contains one or more blue (1) rectangular frames (hollow squares) on a background of azure (8).\n- The output adds magenta (6) lines that ex"
+  },
+  {
+    "task_id": "4258a5f9",
+    "correct": false,
+    "time_s": 8.38,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains several gray (5) cells.  \nIn the output, each gray cell becomes the center of a 3\u00d73 blue (1) square, with the gray cell staying gray in "
+  },
+  {
+    "task_id": "4290ef0e",
+    "correct": false,
+    "time_s": 6.09,
+    "response_preview": "Let\u2019s break this down.\n\nFrom the examples, the transformation takes multiple \u201cpattern objects\u201d (like 3\u00d73 shapes or plus-like forms) scattered in a large grid, and assembles them into a smaller, symmet"
+  },
+  {
+    "task_id": "42a50994",
+    "correct": false,
+    "time_s": 8.8,
+    "response_preview": "Looking at the examples, the transformation seems to remove isolated single colored cells that are not part of a connected group of 2 or more same-colored cells (including diagonally connected). \n\nLet"
+  },
+  {
+    "task_id": "4347f46a",
+    "correct": true,
+    "time_s": 9.4,
+    "response_preview": "Looking at the examples, the transformation rule is: for each contiguous rectangular block of a single non-zero color, we \"hollow out\" the interior, leaving only the border (perimeter) of that block. "
+  },
+  {
+    "task_id": "444801d8",
+    "correct": false,
+    "time_s": 7.45,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example, there are **two separate blue (1) shapes** that look like a thick \"U\" or a rectangular outline with a missing bottom? Actually, looking closer:\n\n- The b"
+  },
+  {
+    "task_id": "445eab21",
+    "correct": true,
+    "time_s": 13.22,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input contains two distinct hollow rectangular shapes (made of the same color, with a border and empty interior).  \nThe output is always a 2\u00d72 block fi"
+  }
+]

@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: arc-project
+Version: 0.1.0
+Summary: ARC-AGI Abstraction and Reasoning Corpus project — LLM vs CV comparison
+Requires-Python: >=3.11
+Requires-Dist: arc-py>=0.12
+Requires-Dist: arckit>=1.0
+Requires-Dist: numpy>=1.24
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: pillow>=10.0
+Requires-Dist: opencv-python>=4.8
+Provides-Extra: deepseek
+Requires-Dist: openai>=1.0; extra == "deepseek"
+Provides-Extra: varc
+Requires-Dist: torch>=2.0; extra == "varc"
+Requires-Dist: torchvision>=0.15; extra == "varc"
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: jupyter>=1; extra == "dev"
+Provides-Extra: all
+Requires-Dist: arc-project[deepseek,dev,varc]; extra == "all"

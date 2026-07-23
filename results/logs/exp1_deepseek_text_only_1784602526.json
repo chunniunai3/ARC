@@ -1,0 +1,152 @@
+[
+  {
+    "task_id": "2013d3e2",
+    "correct": true,
+    "time_s": 22.64,
+    "response_preview": "{\n  \"reasoning\": \"The transformation extracts the smallest bounding box that contains all non-zero pixels, then crops the input to that bounding box. However, the output grids in the examples are 3x3,"
+  },
+  {
+    "task_id": "0d3d703e",
+    "correct": true,
+    "time_s": 2.61,
+    "response_preview": "{\n  \"reasoning\": \"The transformation maps each column's color to a new color consistently across all rows. Observing the examples: For input columns with colors (c1, c2, c3), output columns are (f(c1)"
+  },
+  {
+    "task_id": "56ff96f3",
+    "correct": true,
+    "time_s": 2.96,
+    "response_preview": "{\n  \"reasoning\": \"Each example shows that for each non-zero color, a rectangle is drawn that spans from the minimum row to the maximum row and from the minimum column to the maximum column of all cell"
+  },
+  {
+    "task_id": "846bdb03",
+    "correct": false,
+    "time_s": 50.8,
+    "response_preview": "{\n  \"reasoning\": \"The transformation extracts two distinct shapes from the 13x13 input grid: one shape is a vertical bar (or group) of a certain color, and the other is a horizontal/irregular shape. T"
+  },
+  {
+    "task_id": "d13f3404",
+    "correct": true,
+    "time_s": 2.53,
+    "response_preview": "{\n  \"reasoning\": \"The transformation takes a 3x3 input and produces a 6x6 output. The output is formed by taking the input pattern and repeating it diagonally downwards, shifting one row and one colum"
+  },
+  {
+    "task_id": "6b9890af",
+    "correct": false,
+    "time_s": 54.34,
+    "response_preview": "{\n  \"reasoning\": \"The transformation extracts a rectangular subgrid defined by the bounding box of a red (2) hollow rectangle and a separate pattern (e.g., azure 8, blue 1, yellow 4) inside or near it"
+  },
+  {
+    "task_id": "c909285e",
+    "correct": true,
+    "time_s": 45.09,
+    "response_preview": "{\n  \"reasoning\": \"Each example shows a large pattern with a distinct interior region (marked by a different color) that is extracted as a 7x7 grid. The interior region is bounded by a border of a sing"
+  },
+  {
+    "task_id": "25d487eb",
+    "correct": true,
+    "time_s": 48.92,
+    "response_preview": "{\n  \"reasoning\": \"Each example has a central shape (like a triangle or diamond) made of one color (e.g., red, azure, green) with a single pixel of a different color (blue, green, red) inside it. The t"
+  },
+  {
+    "task_id": "39a8645d",
+    "correct": false,
+    "time_s": 2.73,
+    "response_preview": "{\n  \"reasoning\": \"The input grid contains multiple patterns of colored pixels. Each pattern is a 3x3 shape: a plus sign (center and four orthogonal neighbors) or an X shape (four diagonals). The outpu"
+  },
+  {
+    "task_id": "7b7f7511",
+    "correct": true,
+    "time_s": 2.13,
+    "response_preview": "{\n  \"reasoning\": \"Each example shows a grid that is vertically or horizontally tiled with a smaller pattern. The transformation extracts the top-left repeating block. In Example 1, the 4x8 grid is a 4"
+  },
+  {
+    "task_id": "9aec4887",
+    "correct": false,
+    "time_s": 3.2,
+    "response_preview": "{\n  \"reasoning\": \"Each example contains several distinct colored shapes in the input. The output extracts a bounding box around the central region where these shapes are arranged, then combines them i"
+  },
+  {
+    "task_id": "dc0a314f",
+    "correct": false,
+    "time_s": 48.01,
+    "response_preview": "{\n  \"reasoning\": \"Each 16x16 input contains a central 5x5 subgrid (rows 4-8, columns 4-8? Actually examine patterns: In all examples, the output is 5x5 and appears to be extracted from a region where "
+  },
+  {
+    "task_id": "6430c8c4",
+    "correct": false,
+    "time_s": 41.57,
+    "response_preview": "{\n  \"reasoning\": \"Each input grid is 9x4, consisting of three 4-row sections: top (rows 0-3) with orange (7) and black (0), middle (row 4) a horizontal line of yellow (4), and bottom (rows 5-8) with r"
+  },
+  {
+    "task_id": "e50d258f",
+    "correct": false,
+    "time_s": 2.23,
+    "response_preview": "{\n  \"reasoning\": \"The transformation extracts the top-leftmost non-zero subgrid that is bounded by zeros. In each example, the input contains multiple regions separated by zeros. The output is the sma"
+  },
+  {
+    "task_id": "445eab21",
+    "correct": true,
+    "time_s": 13.94,
+    "response_preview": "{\n  \"reasoning\": \"Each example shows two hollow square shapes (border of a color, interior black) on a 10x10 grid. The output is a 2x2 solid square of the color of the shape that appears in the bottom"
+  },
+  {
+    "task_id": "4938f0c2",
+    "correct": true,
+    "time_s": 5.9,
+    "response_preview": "{\n  \"reasoning\": \"The transformation replicates the pattern of red (2) and green (3) objects symmetrically. In each example, the input contains a red shape and a green shape. The output adds mirrored "
+  },
+  {
+    "task_id": "ecdecbb3",
+    "correct": false,
+    "time_s": 59.86,
+    "response_preview": "{\n  \"reasoning\": \"The transformation rule: Identify all red (2) pixels. For each red pixel, draw a cross-shaped pattern of size 3x3 centered on that red pixel, but only where the cross overlaps with e"
+  },
+  {
+    "task_id": "321b1fc6",
+    "correct": true,
+    "time_s": 39.08,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies connected components of non-black pixels. For each component, it extracts the smallest bounding box containing that component, then replaces the entire "
+  },
+  {
+    "task_id": "d43fd935",
+    "correct": true,
+    "time_s": 49.5,
+    "response_preview": "{\n  \"reasoning\": \"Observing the examples: In each case, there is a 2x2 block of some color (e.g., green(3) in Ex1, green(3) in Ex2, green(3) in Ex3). Additionally, there are isolated single pixels of "
+  },
+  {
+    "task_id": "98cf29f8",
+    "correct": false,
+    "time_s": 5.3,
+    "response_preview": "{\n  \"reasoning\": \"In each example, there are two distinct colored regions: a larger rectangular block and a smaller 'stray' region that is either a line or a small rectangle. The transformation moves "
+  },
+  {
+    "task_id": "3428a4f5",
+    "correct": true,
+    "time_s": 21.1,
+    "response_preview": "{\n  \"reasoning\": \"Each example has a 13x5 input with a horizontal line of 4s (gray) at row 6 (0-indexed). Above that line are red (2) and black (0) pixels; below the line are more red/black pixels. Th"
+  },
+  {
+    "task_id": "3e980e27",
+    "correct": false,
+    "time_s": 4.46,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies distinct colored objects (connected components of non-zero cells) in the input. For each object, it finds the bounding box and then copies the entire ob"
+  },
+  {
+    "task_id": "b9b7f026",
+    "correct": false,
+    "time_s": 2.42,
+    "response_preview": "{\n  \"reasoning\": \"Each example contains multiple colored rectangular regions. The output is the color of the region that is 'enclosed' or 'surrounded' by other regions, specifically the region that is"
+  },
+  {
+    "task_id": "6d58a25d",
+    "correct": false,
+    "time_s": 23.71,
+    "response_preview": "{\n  \"reasoning\": \"In each training example, the grid contains a single contiguous shape of one color (the 'pattern' shape) and multiple isolated pixels of another color (the 'seed' color). The transfo"
+  },
+  {
+    "task_id": "1f642eb9",
+    "correct": true,
+    "time_s": 7.15,
+    "response_preview": "{\n  \"reasoning\": \"The transformation modifies a rectangular block of azure (8) pixels. In each example, there is a contiguous azure rectangle. Single non-azure pixels outside the rectangle are 'reflec"
+  }
+]

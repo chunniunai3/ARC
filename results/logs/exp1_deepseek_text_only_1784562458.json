@@ -1,0 +1,62 @@
+[
+  {
+    "task_id": "007bbfb7",
+    "correct": true,
+    "time_s": 15.66,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach example takes a 3\u00d73 input and produces a 9\u00d79 output.  \nThe 9\u00d79 output appears to be a 3\u00d73 tiling of the input pattern, but with some modifications:  \n- The input patte"
+  },
+  {
+    "task_id": "00d62c1b",
+    "correct": false,
+    "time_s": 7.17,
+    "response_preview": "Looking at the examples, the transformation fills certain enclosed areas of green (3) with yellow (4). The pattern is: wherever there is a region completely bounded by green (3) cells (like a closed l"
+  },
+  {
+    "task_id": "017c7c7b",
+    "correct": true,
+    "time_s": 6.76,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- Input is 6 rows \u00d7 3 columns.\n- Output is 9 rows \u00d7 3 columns.\n- The transformation seems to repeat or extend the pattern by adding extra rows that continu"
+  },
+  {
+    "task_id": "025d127b",
+    "correct": false,
+    "time_s": 4.47,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples, the shape is a thick outline of a \"rightward arrow\" or \"zigzag\" made of the same color.  \nThe transformation shifts the entire shape **one column to the r"
+  },
+  {
+    "task_id": "045e512c",
+    "correct": false,
+    "time_s": 11.57,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Example 1**  \n- Input had a small 3\u00d73 \u201cO\u201d shape (azure 8) and a single green (3) pixel to its right, plus a red (2) \u201cO\u201d shape below.  \n- Output repea"
+  },
+  {
+    "task_id": "0520fde7",
+    "correct": true,
+    "time_s": 15.0,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach input is 3 rows \u00d7 7 columns.  \nThe middle column (index 3) is always 5 (gray), acting as a separator.  \nThe left side (columns 0\u20132) and right side (columns 4\u20136) are 3\u00d7"
+  },
+  {
+    "task_id": "05269061",
+    "correct": false,
+    "time_s": 8.9,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input grid contains a diagonal or anti-diagonal sequence of non-zero numbers that form a repeating pattern. The output grid is a full 7\u00d77 tiling of tha"
+  },
+  {
+    "task_id": "05f2a901",
+    "correct": true,
+    "time_s": 16.75,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, there are two distinct colored shapes: red (2) and azure (8).  \nThe transformation moves the red shape downward so that it is directly below the azure shap"
+  },
+  {
+    "task_id": "06df4c85",
+    "correct": false,
+    "time_s": 14.63,
+    "response_preview": "Let\u2019s break this down.\n\n**Pattern observed from examples:**\n\n- The grid is divided into cells by a \u201cborder\u201d color (8 in example 1, 1 in example 2, 4 in example 3) that forms a repeating pattern of 3\u00d73"
+  },
+  {
+    "task_id": "08ed6ac7",
+    "correct": false,
+    "time_s": 4.41,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples, the input grid contains gray (5) cells that form vertical segments. In the output, each vertical segment of gray is replaced by a single color, and the co"
+  }
+]

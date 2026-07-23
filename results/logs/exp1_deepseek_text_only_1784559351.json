@@ -1,0 +1,62 @@
+[
+  {
+    "task_id": "007bbfb7",
+    "correct": false,
+    "time_s": 10.4,
+    "response_preview": "We can see a pattern from the examples:\n\n- The input is always a 3\u00d73 grid with two colors: black and another color.\n- The output is always a 9\u00d79 grid.\n- The number of black cells in the output is the "
+  },
+  {
+    "task_id": "00d62c1b",
+    "correct": false,
+    "time_s": 25.43,
+    "response_preview": "Let\u2019s break down the pattern.\n\nWe have:\n\n- **Input**: black and green cells.\n- **Output**: black, green, and yellow cells.  \n  The number of green cells stays the same.  \n  Some black cells become yel"
+  },
+  {
+    "task_id": "017c7c7b",
+    "correct": false,
+    "time_s": 6.11,
+    "response_preview": "Let\u2019s break down the pattern.\n\nWe have:\n\n- Input grid: 6 rows \u00d7 3 columns  \n- Output grid: 9 rows \u00d7 3 columns  \n\nSo the height increases from 6 to 9 (adds 3 rows).  \nThe width stays 3.\n\n**Color mappin"
+  },
+  {
+    "task_id": "025d127b",
+    "correct": false,
+    "time_s": 2.82,
+    "response_preview": "The examples show that the output grid is identical to the input grid in both size and color counts.  \nThere is no transformation applied \u2014 the output is simply a copy of the input.  \n\nFor the test in"
+  },
+  {
+    "task_id": "045e512c",
+    "correct": false,
+    "time_s": 25.83,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Step 1 \u2013 Identify what changes**  \nIn each example, the grid is 21\u00d721 = 441 total cells.  \nThe non-black colors in the input are few, and in the outp"
+  },
+  {
+    "task_id": "0520fde7",
+    "correct": false,
+    "time_s": 12.6,
+    "response_preview": "Let\u2019s break down the pattern.\n\nIn each example:\n\n- Input is 3\u00d77 (21 cells total).\n- Output is 3\u00d73 (9 cells total).\n- The colors in the input are black (0), blue (1), and gray (5).\n- The output colors "
+  },
+  {
+    "task_id": "05269061",
+    "correct": false,
+    "time_s": 18.92,
+    "response_preview": "Let\u2019s break this down.\n\nWe have three examples, each starting with a 7\u00d77 grid containing black plus three other colors.  \nIn each output, the black disappears, and the three non-black colors are redis"
+  },
+  {
+    "task_id": "05f2a901",
+    "correct": false,
+    "time_s": 2.8,
+    "response_preview": "The examples show that the input and output grids are identical in every case \u2014 same dimensions, same color counts, and presumably the same arrangement of colors.  \nSince the test input has the same p"
+  },
+  {
+    "task_id": "06df4c85",
+    "correct": false,
+    "time_s": 27.42,
+    "response_preview": "Let\u2019s break down the pattern from the examples.\n\n**Step 1 \u2013 Identify what changes**  \nIn each example, some colors stay the same, some increase, and black decreases by the same total amount that the o"
+  },
+  {
+    "task_id": "08ed6ac7",
+    "correct": false,
+    "time_s": 9.23,
+    "response_preview": "Let\u2019s break this down.\n\nFrom the examples, the input grid has only black (0) and gray (5) pixels.  \nThe output grid has black, blue (1), green (3), red (2), and yellow (4).  \nThe total number of non-b"
+  }
+]

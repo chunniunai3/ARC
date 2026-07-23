@@ -1,0 +1,152 @@
+[
+  {
+    "task_id": "5c0a986e",
+    "correct": false,
+    "time_s": 5.02,
+    "response_preview": "{\n  \"reasoning\": \"Each example contains two 2x2 squares of the same color (blue=1 and red=2). The transformation adds a diagonal line of the same color as the first square (top-left) extending from th"
+  },
+  {
+    "task_id": "47c1f68c",
+    "correct": true,
+    "time_s": 39.95,
+    "response_preview": "{\n  \"reasoning\": \"The transformation extracts the shape formed by the non-background colors (excluding the central cross/plus sign) and rotates it 45 degrees clockwise, then places it in a smaller gri"
+  },
+  {
+    "task_id": "cf98881b",
+    "correct": false,
+    "time_s": 2.54,
+    "response_preview": "{\n  \"reasoning\": \"Each input is a 4x14 grid. The transformation extracts a 4x4 grid from the input. The input is composed of three 4x4 blocks separated by vertical lines of color 2 (red) at columns 4 "
+  },
+  {
+    "task_id": "fcb5c309",
+    "correct": true,
+    "time_s": 55.57,
+    "response_preview": "{\n  \"reasoning\": \"The task involves extracting a rectangular border of a specific color from the input grid. In each example, the input contains multiple colored regions, but one region is a rectangul"
+  },
+  {
+    "task_id": "f15e1fac",
+    "correct": false,
+    "time_s": 63.04,
+    "response_preview": "{\n  \"reasoning\": \"The transformation involves drawing diagonal lines of color 8 (azure) emanating from each red (2) pixel. The lines extend in four diagonal directions (up-left, up-right, down-left, d"
+  },
+  {
+    "task_id": "4347f46a",
+    "correct": true,
+    "time_s": 5.34,
+    "response_preview": "{\n  \"reasoning\": \"The transformation erodes each contiguous rectangular block of a single non-black color by removing its interior pixels, leaving only a one-pixel-thick border (the outline) of that c"
+  },
+  {
+    "task_id": "a8c38be5",
+    "correct": false,
+    "time_s": 3.42,
+    "response_preview": "{\n  \"reasoning\": \"The transformation extracts 3x3 subgrids from the input based on colored regions (non-black) and arranges them into a 9x9 output. Each input has multiple 3x3 colored blocks (like pat"
+  },
+  {
+    "task_id": "5ad4f10b",
+    "correct": false,
+    "time_s": 65.41,
+    "response_preview": "{\n  \"reasoning\": \"Each example contains a large grid with scattered pixels of a certain color (8, 2, 3 respectively) and several 2x2 blocks of another color (4, 1, 6 respectively). The output is a 3x3"
+  },
+  {
+    "task_id": "25d8a9c8",
+    "correct": true,
+    "time_s": 2.11,
+    "response_preview": "{\n  \"reasoning\": \"Observing the examples: In each input grid, there is a row that is entirely filled with a single color (e.g., row 1 in example 1: all 4s; row 2 in example 2: all 6s; row 2 and 3 in e"
+  },
+  {
+    "task_id": "321b1fc6",
+    "correct": false,
+    "time_s": 17.11,
+    "response_preview": "{\n  \"reasoning\": \"The transformation copies 2x2 blocks of non-background colors from the input to new positions. In each example, the input contains several 2x2 blocks (contiguous 2x2 squares of the s"
+  },
+  {
+    "task_id": "67e8384a",
+    "correct": true,
+    "time_s": 2.72,
+    "response_preview": "{\n  \"reasoning\": \"The transformation takes a 3x3 input grid and produces a 6x6 output grid. The output is created by reflecting the input grid both horizontally and vertically, and then concatenating "
+  },
+  {
+    "task_id": "a79310a0",
+    "correct": true,
+    "time_s": 3.3,
+    "response_preview": "{\n  \"reasoning\": \"Observing the examples: each input contains a contiguous block of azure (8) pixels. The transformation moves this block downward by one row (i.e., shifts the shape down by 1) and cha"
+  },
+  {
+    "task_id": "d89b689b",
+    "correct": true,
+    "time_s": 15.1,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies a 2x2 block of azure (8) pixels in the input. Then it finds all other non-zero pixels (excluding the azure block). These pixels are moved to fill the 2x"
+  },
+  {
+    "task_id": "2013d3e2",
+    "correct": true,
+    "time_s": 16.39,
+    "response_preview": "{\n  \"reasoning\": \"The transformation extracts a 3x3 subgrid from the center of the input pattern. The pattern in each example is a symmetric shape (like a plus sign or diamond) with a central 3x3 regi"
+  },
+  {
+    "task_id": "e76a88a6",
+    "correct": true,
+    "time_s": 10.24,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies distinct colored regions (contiguous blocks of non-black pixels) in the input. For each region, it extracts the pattern of colors within that region. Th"
+  },
+  {
+    "task_id": "22233c11",
+    "correct": false,
+    "time_s": 66.45,
+    "response_preview": "{\n  \"reasoning\": \"The transformation adds azure (8) pixels at specific positions relative to green (3) objects. In each example, for every green pixel, an azure pixel is placed one step diagonally out"
+  },
+  {
+    "task_id": "63613498",
+    "correct": false,
+    "time_s": 4.5,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies all distinct colored objects (connected components of non-5 and non-0 colors) in the input grid. For each object, it finds the color that appears most f"
+  },
+  {
+    "task_id": "8d510a79",
+    "correct": false,
+    "time_s": 60.69,
+    "response_preview": "{\n  \"reasoning\": \"The transformation rule involves vertical and horizontal lines of color 2 (red) and color 1 (blue) extending from their original positions until they hit the horizontal gray line (co"
+  },
+  {
+    "task_id": "31aa019c",
+    "correct": false,
+    "time_s": 3.66,
+    "response_preview": "{\n  \"reasoning\": \"Each example identifies a unique non-black pixel that appears exactly once in the input grid. The output contains a 3x3 block centered on that pixel's location, with the center repla"
+  },
+  {
+    "task_id": "00d62c1b",
+    "correct": false,
+    "time_s": 5.49,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies all green (3) pixels that are part of a contiguous region (connected via 4-directional adjacency) and fills the interior of that region with yellow (4)."
+  },
+  {
+    "task_id": "db93a21d",
+    "correct": false,
+    "time_s": 11.94,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies all contiguous rectangular blocks of color 9 (maroon). For each such block, it draws a green (3) border around it, one cell thick, extending outward. Th"
+  },
+  {
+    "task_id": "b775ac94",
+    "correct": false,
+    "time_s": 66.56,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies distinct colored shapes (non-black contiguous regions) in the input. For each shape, it finds the bounding box and fills the bounding box area with the "
+  },
+  {
+    "task_id": "d631b094",
+    "correct": false,
+    "time_s": 1.84,
+    "response_preview": "{\n  \"reasoning\": \"Each example extracts a 1-row grid containing all non-zero pixels from the input, preserving their left-to-right, top-to-bottom order. The output width equals the count of non-zero p"
+  },
+  {
+    "task_id": "41e4d17e",
+    "correct": false,
+    "time_s": 4.49,
+    "response_preview": "{\n  \"reasoning\": \"The transformation adds a magenta (6) cross centered on each blue (1) rectangle. The cross consists of a vertical line through the center column of the rectangle and a horizontal lin"
+  },
+  {
+    "task_id": "b91ae062",
+    "correct": true,
+    "time_s": 8.6,
+    "response_preview": "{\n  \"reasoning\": \"Each example transforms a 3x3 input grid into a larger grid. The output grid dimensions are 3*scale x 3*scale, where scale is the number of distinct non-zero colors in the input? Act"
+  }
+]

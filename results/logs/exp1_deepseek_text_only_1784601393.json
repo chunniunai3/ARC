@@ -1,0 +1,62 @@
+[
+  {
+    "task_id": "007bbfb7",
+    "correct": true,
+    "time_s": 25.14,
+    "response_preview": "{\n  \"reasoning\": \"Each example takes a 3x3 input grid and produces a 9x9 output grid. The output is constructed by tiling the input pattern in a 3x3 grid of 3x3 blocks, but with a specific transformat"
+  },
+  {
+    "task_id": "00d62c1b",
+    "correct": false,
+    "time_s": 6.12,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies all green (3) regions that are completely enclosed by other green pixels (i.e., interior cells) and turns them yellow (4). A cell is considered interior"
+  },
+  {
+    "task_id": "017c7c7b",
+    "correct": true,
+    "time_s": 2.76,
+    "response_preview": "{\n  \"reasoning\": \"Each example takes a 6x3 input grid and produces a 9x3 output grid. The output is formed by copying the input pattern and then appending a modified copy of the input pattern below it"
+  },
+  {
+    "task_id": "025d127b",
+    "correct": true,
+    "time_s": 2.57,
+    "response_preview": "{\n  \"reasoning\": \"Each example contains two distinct shapes made of the same color (magenta and red in first, azure in second). The transformation shifts each shape one column to the right, preserving"
+  },
+  {
+    "task_id": "045e512c",
+    "correct": false,
+    "time_s": 61.96,
+    "response_preview": "{\n  \"reasoning\": \"The transformation rule involves replicating patterns from the input to fill the output grid. In each example, the input contains one or more small patterns (like 3x3 shapes or isola"
+  },
+  {
+    "task_id": "0520fde7",
+    "correct": false,
+    "time_s": 1.74,
+    "response_preview": "{\n  \"reasoning\": \"Each input grid is 3x7 with a vertical line of 5s in column 3 (0-indexed). The left and right halves (columns 0-2 and 4-6) are 3x3 subgrids. The transformation extracts the left 3x3 "
+  },
+  {
+    "task_id": "05269061",
+    "correct": false,
+    "time_s": 52.4,
+    "response_preview": "{\n  \"reasoning\": \"Each example shows a pattern that repeats across the entire grid. The pattern is derived from a diagonal line of non-zero pixels in the input. In Example 1, the pattern is [2,8,3] re"
+  },
+  {
+    "task_id": "05f2a901",
+    "correct": true,
+    "time_s": 49.44,
+    "response_preview": "{\n  \"reasoning\": \"The transformation moves the red (2) object downward so that its bottom aligns with the bottom of the azure (8) object, while keeping the azure object fixed. In each example, the red"
+  },
+  {
+    "task_id": "06df4c85",
+    "correct": false,
+    "time_s": 55.62,
+    "response_preview": "{\n  \"reasoning\": \"The transformation propagates colored 2x2 blocks to fill entire rows/columns of the grid's repeating pattern. The grid is divided into 3x3 cells (separated by lines of color 8 in exa"
+  },
+  {
+    "task_id": "08ed6ac7",
+    "correct": true,
+    "time_s": 3.0,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies vertical segments of gray (5) pixels. Each contiguous vertical segment (same column, consecutive rows) is replaced by a distinct color, cycling through "
+  }
+]

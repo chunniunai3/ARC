@@ -1,0 +1,62 @@
+[
+  {
+    "task_id": "007bbfb7",
+    "correct": false,
+    "time_s": 8.38,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach example starts with a 3\u00d73 grid.  \nThe description gives two colors: one is black (0), the other is a non-black color.  \nThe output is also described as a 3\u00d73 grid (des"
+  },
+  {
+    "task_id": "00d62c1b",
+    "correct": false,
+    "time_s": 34.94,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The number of green cells stays the same.\n- Some black cells turn yellow.\n- The number of yellow cells equals the difference between the original black c"
+  },
+  {
+    "task_id": "017c7c7b",
+    "correct": false,
+    "time_s": 8.29,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach example input is 6\u00d73, and the output is 9\u00d73 \u2014 but the instruction says the test output must be 6\u00d73.  \nThat suggests the examples might be showing a transformation that"
+  },
+  {
+    "task_id": "025d127b",
+    "correct": false,
+    "time_s": 3.24,
+    "response_preview": "Let\u2019s examine the examples.\n\n**Example 1:**  \n- Input: 14\u00d79, colors: black (0), magenta (6), red (2).  \n- Output: same dimensions, same colors, same counts.  \nNo change.\n\n**Example 2:**  \n- Input: 8\u00d79"
+  },
+  {
+    "task_id": "045e512c",
+    "correct": false,
+    "time_s": 12.45,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input has a black background and a few colored pixels. The output keeps the same number of some colors, but increases others \u2014 specifically, the non-bl"
+  },
+  {
+    "task_id": "0520fde7",
+    "correct": false,
+    "time_s": 20.48,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach example input is 3\u00d77, with black (0), blue (1), and gray (5) cells.  \nEach output is 3\u00d73, with black (0) and red (2) cells.\n\nCounting colors in each example:\n\n**Exampl"
+  },
+  {
+    "task_id": "05269061",
+    "correct": false,
+    "time_s": 16.48,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input has four colors: black (0) and three other colors.  \nThe output has only the three non-black colors, each appearing in a specific count:  \n- One "
+  },
+  {
+    "task_id": "05f2a901",
+    "correct": false,
+    "time_s": 10.09,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn all examples, the input and output have the same dimensions and the same color counts (black, cyan, red).  \nThat means the transformation does not add or remove any colo"
+  },
+  {
+    "task_id": "06df4c85",
+    "correct": false,
+    "time_s": 15.22,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the number of black cells decreases, and the number of some other colors increases. The total number of cells stays the same.\n\n**Example 1**  \n- Black: 172"
+  },
+  {
+    "task_id": "08ed6ac7",
+    "correct": false,
+    "time_s": 9.82,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn both examples:\n- The input grid has only black (0) and gray (5) cells.\n- The output grid has black (0), blue (1), green (3), red (2), and yellow (4) cells.\n- The total n"
+  }
+]

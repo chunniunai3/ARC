@@ -1,0 +1,22 @@
+[project]
+name = "arc-project"
+version = "0.1.0"
+description = "ARC-AGI Abstraction and Reasoning Corpus project — LLM vs CV comparison"
+requires-python = ">=3.11"
+dependencies = [
+    "arc-py>=0.12",
+    "arckit>=1.0",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "pillow>=10.0",
+    "opencv-python>=4.8",
+]
+
+[project.optional-dependencies]
+deepseek = ["openai>=1.0"]
+varc = ["torch>=2.0", "torchvision>=0.15"]
+dev = ["pytest>=7", "jupyter>=1"]
+all = ["arc-project[deepseek,varc,dev]"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,62 @@
+[
+  {
+    "task_id": "007bbfb7",
+    "correct": false,
+    "time_s": 15.26,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach input is a 3\u00d73 grid.  \nThe output is a 9\u00d79 grid.  \nThe number of black cells and colored cells in the input seems to determine the counts in the output.\n\n**Step 1 \u2013 Ch"
+  },
+  {
+    "task_id": "00d62c1b",
+    "correct": false,
+    "time_s": 9.6,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- The number of green cells stays the same.\n- Some black cells become yellow.\n- The number of yellow cells equals the number of green cells that are **adja"
+  },
+  {
+    "task_id": "017c7c7b",
+    "correct": false,
+    "time_s": 9.99,
+    "response_preview": "Let\u2019s examine the pattern.\n\n**Observations from examples:**\n\n- Input grids are 6\u00d73.  \n- Output grids are 9\u00d73.  \n- The number of black cells and blue cells in the input changes to black and red in the "
+  },
+  {
+    "task_id": "025d127b",
+    "correct": false,
+    "time_s": 3.06,
+    "response_preview": "Let\u2019s examine the examples.\n\n**Example 1**  \n- Input: 14\u00d79, colors: black (0), magenta (6), red (2).  \n- Output: Same dimensions, same colors, same counts.  \nNo change.\n\n**Example 2**  \n- Input: 8\u00d79, "
+  },
+  {
+    "task_id": "045e512c",
+    "correct": false,
+    "time_s": 14.98,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the input has a certain number of colored cells (non-black). The output keeps the same grid size (21\u00d721) and the same number of cells for one of the colors"
+  },
+  {
+    "task_id": "0520fde7",
+    "correct": false,
+    "time_s": 5.83,
+    "response_preview": "Let\u2019s examine the pattern.\n\nEach input is 3\u00d77.  \nEach output is 3\u00d73.  \n\nThe colors in the input are black (0), blue (1), and gray (5).  \nIn the output, black (0) and red (2) appear.\n\nCounting colors i"
+  },
+  {
+    "task_id": "05269061",
+    "correct": false,
+    "time_s": 30.43,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example:\n- Input is 7\u00d77 with four colors: black (background) and three other colors.\n- Output is also 7\u00d77, but now only three colors appear, and the black is gone.\n"
+  },
+  {
+    "task_id": "05f2a901",
+    "correct": false,
+    "time_s": 6.44,
+    "response_preview": "Let\u2019s examine the examples.\n\nIn each case, the input and output have the same dimensions and the same total counts of each color.  \nThat means the transformation is not changing the number of cells or"
+  },
+  {
+    "task_id": "06df4c85",
+    "correct": false,
+    "time_s": 15.97,
+    "response_preview": "Let\u2019s examine the pattern.\n\nIn each example, the total number of cells stays the same, but the counts of certain colors change.  \nSpecifically, the colors that appear in small amounts (like red, green"
+  },
+  {
+    "task_id": "08ed6ac7",
+    "correct": false,
+    "time_s": 13.63,
+    "response_preview": "Let\u2019s examine the examples.\n\n**Example 1**  \nInput: 9\u00d79, black=55, gray=26  \nOutput: 9\u00d79, black=55, blue=9, green=6, red=8, yellow=3  \n\nThe gray cells (26) are replaced by four colors: blue, green, re"
+  }
+]

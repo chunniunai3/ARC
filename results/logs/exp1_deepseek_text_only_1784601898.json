@@ -1,0 +1,62 @@
+[
+  {
+    "task_id": "b7249182",
+    "correct": false,
+    "time_s": 62.23,
+    "response_preview": "{\n  \"reasoning\": \"The transformation connects two non-black pixels (one red, one light blue) with a path that forms a rectangle-like shape. In each example, the two colored pixels are at different row"
+  },
+  {
+    "task_id": "e26a3af2",
+    "correct": false,
+    "time_s": 54.73,
+    "response_preview": "{\n  \"reasoning\": \"Each example shows that the output grid is formed by taking the input grid and, for each row, replacing all non-background colors (i.e., any color that appears in that row but is not"
+  },
+  {
+    "task_id": "7c008303",
+    "correct": false,
+    "time_s": 54.47,
+    "response_preview": "{\n  \"reasoning\": \"Each example has a 9x9 input grid with a horizontal line of color 8 (azure) dividing the grid into two regions: top and bottom. The top region contains colored patterns (non-8, non-0"
+  },
+  {
+    "task_id": "952a094c",
+    "correct": false,
+    "time_s": 5.09,
+    "response_preview": "{\n  \"reasoning\": \"In each example, there is a rectangular frame of a certain color (light blue in ex1, orange in ex2, blue in ex3) containing interior colored pixels. The interior pixels (non-frame, n"
+  },
+  {
+    "task_id": "f8b3ba0a",
+    "correct": false,
+    "time_s": 60.03,
+    "response_preview": "{\n  \"reasoning\": \"Each input grid consists of 13 rows (odd number) with alternating rows of zeros and rows containing 2x2 colored blocks separated by zeros. The pattern is that each non-zero row has b"
+  },
+  {
+    "task_id": "09629e4f",
+    "correct": false,
+    "time_s": 3.58,
+    "response_preview": "{\n  \"reasoning\": \"The input grid is 11x11 with a cross-shaped pattern of gray (5) lines dividing the grid into four quadrants and a central cross. The transformation identifies the dominant color in e"
+  },
+  {
+    "task_id": "995c5fa3",
+    "correct": true,
+    "time_s": 22.6,
+    "response_preview": "{\n  \"reasoning\": \"The input is a 4x14 grid with gray (5) background and white (0) separators. It contains three 4x4 subgrids separated by white columns at positions 4 and 9. Each subgrid has a pattern"
+  },
+  {
+    "task_id": "ae3edfdc",
+    "correct": false,
+    "time_s": 55.32,
+    "response_preview": "{\n  \"reasoning\": \"Each example shows that isolated single-color pixels (non-black) act as 'seeds' that grow into a plus-shaped cross of their own color, centered on the seed, but only if there is anot"
+  },
+  {
+    "task_id": "db93a21d",
+    "correct": false,
+    "time_s": 10.7,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies all contiguous rectangular blocks of color 9 (maroon). For each block, it draws a green (3) border around it, one cell thick, extending outward. Additio"
+  },
+  {
+    "task_id": "810b9b61",
+    "correct": false,
+    "time_s": 2.86,
+    "response_preview": "{\n  \"reasoning\": \"The transformation identifies all contiguous regions of blue (1) pixels that are shaped like hollow squares (a border of 1s with a hole of 0s inside). For each such hollow square, th"
+  }
+]

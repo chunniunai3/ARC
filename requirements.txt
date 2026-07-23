@@ -1,0 +1,13 @@
+arc-py>=0.12
+arckit>=1.0
+numpy>=1.24
+matplotlib>=3.7
+pillow>=10.0
+opencv-python>=4.8
+
+# DeepSeek API (optional)
+# openai>=1.0
+
+# VARC / CV (optional)
+# torch>=2.0
+# torchvision>=0.15
