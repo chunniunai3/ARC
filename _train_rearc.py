@@ -14,7 +14,7 @@ def rearc_collate(batch):
         n = b['train_input'].shape[0]
         train_in_list.append(b['train_input'])
         train_target_list.append(b['train_target'])
-        task_idx_list.append(b['task_idx'].repeat(n))
+        task_idx_list.append(torch.tensor(b['task_idx']).repeat(n))
     out = {
         'train_input': torch.cat(train_in_list, dim=0).unsqueeze(0),
         'train_target': torch.cat(train_target_list, dim=0).unsqueeze(0),
