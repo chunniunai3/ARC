@@ -9,26 +9,18 @@ import math
 import collections.abc as abc
 
 def rearc_collate(batch):
-    max_pairs = max(b['train_input'].shape[0] for b in batch)
-    train_in, train_target, task_idx = [], [], []
+    train_in_list, train_target_list, task_idx_list = [], [], []
     for b in batch:
         n = b['train_input'].shape[0]
-        ti = b['train_input']
-        tt = b['train_target']
-        if n < max_pairs:
-            pad = max_pairs - n
-            pad_ti = torch.full((pad, *ti.shape[1:]), BG_CLASS, dtype=ti.dtype)
-            pad_tt = torch.full((pad, *tt.shape[1:]), BG_CLASS, dtype=tt.dtype)
-            ti = torch.cat([ti, pad_ti], dim=0)
-            tt = torch.cat([tt, pad_tt], dim=0)
-        train_in.append(ti.unsqueeze(0))
-        train_target.append(tt.unsqueeze(0))
-        task_idx.append(torch.tensor([[b['task_idx']]]))
-    return {
-        'train_input': torch.cat(train_in, dim=0),
-        'train_target': torch.cat(train_target, dim=0),
-        'task_idx': torch.cat(task_idx, dim=0),
+        train_in_list.append(b['train_input'])
+        train_target_list.append(b['train_target'])
+        task_idx_list.append(b['task_idx'].repeat(n))
+    out = {
+        'train_input': torch.cat(train_in_list, dim=0).unsqueeze(0),
+        'train_target': torch.cat(train_target_list, dim=0).unsqueeze(0),
+        'task_idx': torch.cat(task_idx_list, dim=0).unsqueeze(0),
     }
+    return out
 
 device = torch.device('cuda')
 config = VARCConfig()
@@ -61,7 +53,7 @@ criterion = nn.CrossEntropyLoss(ignore_index=BG_CLASS)
 T_max = 100
 num_epochs = 100
 
-batch_size = 1
+batch_size = 8
 
 for epoch in range(start_epoch, num_epochs + 1):
     if epoch <= 5:
