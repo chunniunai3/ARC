@@ -47,19 +47,19 @@ else:
 train_dataset = ARCDataset(split='training', max_tasks=400, rearc_prob=1.0)
 val_dataset = ARCDataset(split='training', max_tasks=40, rearc_prob=0.0)
 
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, betas=(0.9, 0.999))
+optimizer = torch.optim.Adam(model.parameters(), lr=5e-4, betas=(0.9, 0.999))
 criterion = nn.CrossEntropyLoss(ignore_index=BG_CLASS)
 T_max = 100
 num_epochs = 100
 
-batch_size = 8
+batch_size = 2
 
 for epoch in range(start_epoch, num_epochs + 1):
     if epoch <= 5:
-        lr = 1e-3 * epoch / 5
+        lr = 5e-4 * epoch / 5
     else:
         progress = (epoch - 5) / T_max
-        lr = 1e-3 * 0.5 * (1.0 + math.cos(math.pi * progress))
+        lr = 5e-4 * 0.5 * (1.0 + math.cos(math.pi * progress))
     for g in optimizer.param_groups:
         g["lr"] = lr
 
