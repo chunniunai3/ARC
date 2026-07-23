@@ -3,9 +3,32 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from src.varc import (VARCConfig, VARCModel, ARCDataset, save_checkpoint,
-                      load_checkpoint, BG_CLASS)
+                      load_checkpoint, BG_CLASS, BD_CLASS)
 from pathlib import Path
 import math
+import collections.abc as abc
+
+def rearc_collate(batch):
+    max_pairs = max(b['train_input'].shape[0] for b in batch)
+    train_in, train_target, task_idx = [], [], []
+    for b in batch:
+        n = b['train_input'].shape[0]
+        ti = b['train_input']
+        tt = b['train_target']
+        if n < max_pairs:
+            pad = max_pairs - n
+            pad_ti = torch.full((pad, *ti.shape[1:]), BG_CLASS, dtype=ti.dtype)
+            pad_tt = torch.full((pad, *tt.shape[1:]), BG_CLASS, dtype=tt.dtype)
+            ti = torch.cat([ti, pad_ti], dim=0)
+            tt = torch.cat([tt, pad_tt], dim=0)
+        train_in.append(ti.unsqueeze(0))
+        train_target.append(tt.unsqueeze(0))
+        task_idx.append(torch.tensor([[b['task_idx']]]))
+    return {
+        'train_input': torch.cat(train_in, dim=0),
+        'train_target': torch.cat(train_target, dim=0),
+        'task_idx': torch.cat(task_idx, dim=0),
+    }
 
 device = torch.device('cuda')
 config = VARCConfig()
@@ -51,7 +74,7 @@ for epoch in range(start_epoch, num_epochs + 1):
 
     model.train()
     total_loss = 0.0
-    loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=rearc_collate)
     for batch in loader:
         train_in = batch["train_input"].to(device)
         train_target = batch["train_target"].to(device)
@@ -71,7 +94,7 @@ for epoch in range(start_epoch, num_epochs + 1):
 
     model.eval()
     val_loss = 0.0
-    val_loader = DataLoader(val_dataset, batch_size=batch_size)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, collate_fn=rearc_collate)
     with torch.no_grad():
         for batch in val_loader:
             ti = batch["train_input"].to(device)
