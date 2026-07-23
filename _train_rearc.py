@@ -14,13 +14,12 @@ def rearc_collate(batch):
         n = b['train_input'].shape[0]
         train_in_list.append(b['train_input'])
         train_target_list.append(b['train_target'])
-        task_idx_list.append(torch.tensor(b['task_idx']).repeat(n))
-    out = {
-        'train_input': torch.cat(train_in_list, dim=0).unsqueeze(0),
-        'train_target': torch.cat(train_target_list, dim=0).unsqueeze(0),
-        'task_idx': torch.cat(task_idx_list, dim=0).unsqueeze(0),
+        task_idx_list.append(torch.tensor(b['task_idx']).expand(n))
+    return {
+        'train_input': torch.cat(train_in_list, dim=0),
+        'train_target': torch.cat(train_target_list, dim=0),
+        'task_idx': torch.cat(task_idx_list, dim=0),
     }
-    return out
 
 device = torch.device('cuda')
 config = VARCConfig()
@@ -71,11 +70,8 @@ for epoch in range(start_epoch, num_epochs + 1):
         train_in = batch["train_input"].to(device)
         train_target = batch["train_target"].to(device)
         task_ids = batch.get("task_idx")
-        B, n_pairs = train_in.shape[0], train_in.shape[1]
-        train_in = train_in.view(B * n_pairs, *train_in.shape[2:])
-        train_target = train_target.view(B * n_pairs, *train_target.shape[2:])
         if task_ids is not None:
-            task_ids = task_ids.to(device).view(B, 1).expand(B, n_pairs).reshape(B * n_pairs)
+            task_ids = task_ids.to(device)
         pred = model(train_in, task_ids=task_ids)
         loss = criterion(pred, train_target)
         optimizer.zero_grad()
@@ -92,11 +88,8 @@ for epoch in range(start_epoch, num_epochs + 1):
             ti = batch["train_input"].to(device)
             to = batch["train_target"].to(device)
             tids = batch.get("task_idx")
-            B, N = ti.shape[0], ti.shape[1]
-            ti = ti.view(B * N, *ti.shape[2:])
-            to = to.view(B * N, *to.shape[2:])
             if tids is not None:
-                tids = tids.to(device).view(B, 1).expand(B, N).reshape(B * N)
+                tids = tids.to(device)
             val_loss += criterion(model(ti, task_ids=tids), to).item()
     val_loss /= len(val_loader)
 
