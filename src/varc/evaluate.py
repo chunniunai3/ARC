@@ -1,3 +1,4 @@
+import random
 from typing import Any
 
 import numpy as np
@@ -5,7 +6,7 @@ import torch
 from PIL import Image
 
 from src.data_loader import load_task, task_to_arrays, load_tasks, grid_to_array
-from src.varc.data import task_to_canvas, DEFAULT_CANVAS_SIZE, BG_CLASS, BD_CLASS
+from src.varc.data import task_to_canvas, DEFAULT_CANVAS_SIZE, BG_CLASS, BD_CLASS, _scale_grid
 from src.varc.model import VARCModel
 
 
@@ -68,6 +69,85 @@ def run_inference(
     return pred
 
 
+NUM_AUGS_MULTIVIEW = 8
+
+
+def _apply_aug(grid: np.ndarray, aug_idx: int) -> np.ndarray:
+    if aug_idx == 0:
+        return grid
+    elif aug_idx == 1:
+        return np.rot90(grid, k=1)
+    elif aug_idx == 2:
+        return np.rot90(grid, k=2)
+    elif aug_idx == 3:
+        return np.rot90(grid, k=3)
+    elif aug_idx == 4:
+        return np.fliplr(grid)
+    elif aug_idx == 5:
+        return np.flipud(grid)
+    elif aug_idx == 6:
+        return np.fliplr(np.rot90(grid, k=1))
+    elif aug_idx == 7:
+        return np.flipud(np.rot90(grid, k=1))
+    return grid
+
+
+def _inverse_aug(grid: np.ndarray, aug_idx: int) -> np.ndarray:
+    if aug_idx == 0:
+        return grid
+    elif aug_idx == 1:
+        return np.rot90(grid, k=3)
+    elif aug_idx == 2:
+        return np.rot90(grid, k=2)
+    elif aug_idx == 3:
+        return np.rot90(grid, k=1)
+    elif aug_idx == 4:
+        return np.fliplr(grid)
+    elif aug_idx == 5:
+        return np.flipud(grid)
+    elif aug_idx == 6:
+        return np.flipud(np.rot90(grid, k=3))
+    elif aug_idx == 7:
+        return np.flipud(np.rot90(grid, k=1))
+    return grid
+
+
+def run_inference_multiview(
+    model: VARCModel,
+    task: dict[str, Any],
+    device: torch.device,
+    canvas_size: int = DEFAULT_CANVAS_SIZE,
+    task_id: int | None = None,
+    num_views: int = 8,
+) -> np.ndarray:
+    model.eval()
+    arrays = task_to_arrays(task)
+    views = []
+    for aug_idx in range(num_views):
+        aug_test = task.copy()
+        aug_test["test"] = [{"input": _apply_aug(arrays["test"][0]["input"], aug_idx)}]
+        canvas, _, _, _, _ = _prepare_test_input(aug_test, canvas_size)
+        canvas = canvas.to(device)
+        tids = None
+        if task_id is not None:
+            tids = torch.full((1,), task_id, dtype=torch.long, device=device)
+        logits = model(canvas, task_ids=tids)
+        pred = logits[0].argmax(dim=0).cpu().numpy()
+        views.append(pred)
+    stacked = np.stack(views)
+    final = np.zeros_like(views[0], dtype=np.int64)
+    for i in range(views[0].shape[0]):
+        for j in range(views[0].shape[1]):
+            counts = np.bincount(stacked[:, i, j].astype(np.int64), minlength=12)
+            counts[BG_CLASS] = 0
+            counts[BD_CLASS] = 0
+            if counts.max() > 0:
+                final[i, j] = counts.argmax()
+            else:
+                final[i, j] = views[0][i, j]
+    return final
+
+
 def predict_grid(
     model: VARCModel,
     task: dict[str, Any],
@@ -75,8 +155,13 @@ def predict_grid(
     canvas_size: int = DEFAULT_CANVAS_SIZE,
     task_id: int | None = None,
     known_out_shape: tuple[int, int] | None = None,
+    use_multiview: bool = False,
+    num_views: int = 8,
 ) -> list[list[int]] | None:
-    pred_classes = run_inference(model, task, device, canvas_size, task_id=task_id)
+    if use_multiview:
+        pred_classes = run_inference_multiview(model, task, device, canvas_size, task_id, num_views)
+    else:
+        pred_classes = run_inference(model, task, device, canvas_size, task_id=task_id)
     if known_out_shape is not None:
         h, w = known_out_shape
         return extract_grid_from_canvas(pred_classes, h, w, canvas_size).tolist()
@@ -128,6 +213,8 @@ def evaluate_on_tasks(
     ttt_steps: int = 100,
     ttt_lr: float = 3e-4,
     task_ids: list[int] | None = None,
+    use_multiview: bool = False,
+    num_views: int = 8,
 ) -> list[dict[str, Any]]:
     results = []
     for i, task in enumerate(tasks):
@@ -142,9 +229,9 @@ def evaluate_on_tasks(
             train_in, train_target, _, _, _ = task_to_canvas(arrays, canvas_size)
             from src.varc.train import ttt_finetune
             ttt_finetune(model_copy, train_in, train_target, device, steps=ttt_steps, lr=ttt_lr)
-            pred_grid = predict_grid(model_copy, task, device, canvas_size, task_id=i, known_out_shape=out_shape)
+            pred_grid = predict_grid(model_copy, task, device, canvas_size, task_id=i, known_out_shape=out_shape, use_multiview=use_multiview, num_views=num_views)
         else:
-            pred_grid = predict_grid(model, task, device, canvas_size, task_id=i, known_out_shape=out_shape)
+            pred_grid = predict_grid(model, task, device, canvas_size, task_id=i, known_out_shape=out_shape, use_multiview=use_multiview, num_views=num_views)
 
         correct = False
         if pred_grid is not None:
