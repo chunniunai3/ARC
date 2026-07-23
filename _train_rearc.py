@@ -61,7 +61,7 @@ criterion = nn.CrossEntropyLoss(ignore_index=BG_CLASS)
 T_max = 100
 num_epochs = 100
 
-batch_size = 32
+batch_size = 4
 
 for epoch in range(start_epoch, num_epochs + 1):
     if epoch <= 5:
