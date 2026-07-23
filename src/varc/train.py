@@ -132,6 +132,8 @@ def load_checkpoint(model: VARCModel, path: str, device: torch.device) -> VARCMo
     ckpt = torch.load(path, map_location=device, weights_only=False)
     if "model_state_dict" in ckpt:
         model.load_state_dict(ckpt["model_state_dict"])
+    elif "model" in ckpt:
+        model.load_state_dict(ckpt["model"])
     else:
         model.load_state_dict(ckpt)
     return model
